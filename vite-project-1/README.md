@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 
 This application was a tutorial from Traversy Media (YouTube) that
-I followed. 'React Crash Course 2024'. I claim none of this as my own except for some minor variations.
+I followed. 'React Crash Course 2024'. I claim none of this as my own except for some minor variations. https://github.com/bradtraversy/react-crash-2024 
