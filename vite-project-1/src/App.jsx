@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+const App = () => {
+  // Can only return a single element but you can have as much
+  //    in that element that you want
 
-function App() {
-  const [count, setCount] = useState(0)
+  const name = 'Bill';
+  const x = 10;
+  const y = 7;
+  const names = ['Crosby','Geno','Nala','Finn'];
+  const loggedIn = true;
+  const style1 = { // We dont need to do it this way since we are using Tailwind
+    color:'green',
+    fontSize: '55px'
+  };
 
   return (
     <>
+      <div className='text-5xl'>MyApp</div>
+      <div style={{color:'red', fontSize:24}}>Hello {name}</div>
+      <div style={style1}>The sum of {x} and {y} is {x + y}</div>
+      <br></br>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <ul>
+          {names.map((dogname, index) => (<li key={index}>
+              {index} {dogname}
+          </li>))}
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <br></br>
+      <div>
+        { loggedIn ? <h1>You are logged in</h1> : <h2>You are NOT logged in</h2>}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+        
+};
 
-export default App
+export default App;

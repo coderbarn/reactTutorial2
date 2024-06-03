@@ -1,0 +1,17 @@
+   60  sudo apt install npm
+   62  npm -v
+   83  npx --version
+   84  npx create-react-app my-react-app
+  231  npm -i -D react-router-dom
+  232  npm install react-router-dom
+  233  npm audit
+  234  npm -i -D react-router-dom
+  237  npm start
+  241  npm create vite@latest
+  248  npm install
+  249  npm start
+  251  npm run dev
+  252  npm install -D tailwindcss postcss autoprefixer
+  253  npx tailwindcss init -p
+  259  history | rep np > installnote.txt
+  260  history | grep np > installnote.txt
