@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import {FaMapMarker } from 'react-icons/fa' // Need to run npm i react-icons first
                                 // 'fa' means fontawesome
-
+ 
 const JobListing = ({ job }) => {
 
   const [showFullDescription, setShowFullDescription] = useState(false);
