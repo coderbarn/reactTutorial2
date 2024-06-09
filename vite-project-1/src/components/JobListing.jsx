@@ -1,21 +1,22 @@
 import React from 'react'
 import { useState } from 'react';
-import {FaMapMarker } from 'react-icons/fa' // Need to run npm i react-icons first
-                                // 'fa' means fontawesome
- import {Link} from 'react-router-dom';
+import { FaMapMarker } from 'react-icons/fa' // Need to run npm i react-icons first
+// 'fa' means fontawesome
+import { Link } from 'react-router-dom';
+
 
 const JobListing = ({ job }) => {
 
-  const [showFullDescription, setShowFullDescription] = useState(false);
+    const [showFullDescription, setShowFullDescription] = useState(false);
 
-  let description = job.description;
+    let description = job.description;
 
-  if(!showFullDescription){
-    description = job.description.substring(0,90) + '...';
+    if (!showFullDescription) {
+        description = job.description.substring(0, 90) + '...';
 
-  }
-  return (
-        
+    }
+    return (
+
         <div className="bg-white rounded-xl shadow-md relative">
             <div className="p-4">
                 <div className="mb-6">
@@ -43,13 +44,13 @@ const JobListing = ({ job }) => {
                         to={`/jobs/${job.id}`}
                         className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
                     >
-                    Read More
+                        Read More
                     </Link>
                 </div>
             </div>
         </div>
 
-  );
+    );
 };
 
 export default JobListing
